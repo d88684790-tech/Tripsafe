@@ -1,0 +1,1639 @@
+/* ==========================================
+   TRIPSAFE BLUE THEME
+========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 45%, #f4f7fb 100%);
+  color: #172033;
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 18px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+  text-align: center;
+  padding: 12px 0 22px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #1769d1;
+}
+
+header p {
+  margin: 7px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   GENERAL CARDS
+========================================== */
+
+.card,
+.balance-card,
+.survival-card,
+.cycle-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 18px;
+  margin-bottom: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(39, 103, 170, 0.08);
+
+  border: 1px solid rgba(74, 144, 226, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #1d2a3a;
+}
+
+
+/* ==========================================
+   BALANCE CARD
+========================================== */
+
+.balance-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  padding: 28px 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1976e8 0%,
+      #2f8cff 55%,
+      #65b5ff 100%
+    );
+
+  color: white;
+
+  border: none;
+
+  box-shadow:
+    0 12px 30px rgba(25, 118, 232, 0.25);
+}
+
+/* Decorative circles */
+
+.balance-card::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -55px;
+  top: -65px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+.balance-card::after {
+  content: "";
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  left: -45px;
+  bottom: -55px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border-radius: 50%;
+}
+
+.balance-card span {
+  position: relative;
+  z-index: 1;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 14px;
+}
+
+.balance-card h2 {
+  position: relative;
+  z-index: 1;
+
+  margin: 9px 0;
+
+  font-size: 42px;
+
+  letter-spacing: -1px;
+}
+
+.balance-card p {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+button {
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 14px 16px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+
+/* Blue primary */
+
+.primary {
+  background:
+    linear-gradient(
+      135deg,
+      #1976e8,
+      #318cff
+    );
+
+  color: white;
+
+  box-shadow:
+    0 6px 15px rgba(25, 118, 232, 0.2);
+}
+
+
+/* Expense */
+
+.danger {
+  background:
+    linear-gradient(
+      135deg,
+      #ff6b78,
+      #f04f61
+    );
+
+  color: white;
+
+  box-shadow:
+    0 6px 15px rgba(240, 79, 97, 0.18);
+}
+
+
+/* Secondary */
+
+.secondary {
+  background: #edf3fa;
+
+  color: #35516f;
+}
+
+
+/* Full-width button */
+
+.full {
+  width: 100%;
+}
+
+
+/* ==========================================
+   STATISTICS GRID
+========================================== */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.stat-card {
+  position: relative;
+
+  background: white;
+
+  border-radius: 19px;
+
+  padding: 17px;
+
+  box-shadow:
+    0 6px 18px rgba(31, 84, 140, 0.07);
+
+  border: 1px solid #edf3fa;
+
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  right: -18px;
+  bottom: -18px;
+
+  background: #edf6ff;
+
+  border-radius: 50%;
+}
+
+.stat-card span {
+  display: block;
+
+  color: #7890aa;
+
+  font-size: 12px;
+
+  margin-bottom: 8px;
+}
+
+.stat-card strong {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  font-size: 18px;
+
+  color: #1c3550;
+}
+
+
+/* ==========================================
+   SURVIVAL STATUS
+========================================== */
+
+.survival-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f3f9ff
+    );
+}
+
+#survivalIcon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e7f3ff;
+
+  border-radius: 16px;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(30, 130, 220, 0.08);
+}
+
+.survival-card h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+
+  color: #1d344d;
+}
+
+.survival-card p {
+  margin: 0;
+
+  color: #72869d;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+/* ==========================================
+   LABELS
+========================================== */
+
+label {
+  display: block;
+
+  margin: 13px 0 6px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  color: #52677d;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+input,
+select {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #dce7f2;
+
+  border-radius: 13px;
+
+  background: #f8fbfe;
+
+  color: #1e2e40;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+
+  border-color: #4b9cff;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(75, 156, 255, 0.12);
+}
+
+input::placeholder {
+  color: #a5b3c2;
+}
+
+
+/* ==========================================
+   SALARY CYCLE
+========================================== */
+
+.cycle-card {
+  display: grid;
+
+  gap: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f6faff
+    );
+}
+
+.cycle-card div {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #edf2f7;
+}
+
+.cycle-card div:last-child {
+  border-bottom: none;
+
+  padding-bottom: 0;
+}
+
+.cycle-card span {
+  color: #7a8da1;
+
+  font-size: 13px;
+}
+
+.cycle-card strong {
+  font-size: 16px;
+
+  color: #1c5fa8;
+}
+
+
+/* ==========================================
+   TRANSACTION FORM
+========================================== */
+
+.transaction-form {
+  animation:
+    slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+.form-buttons {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+
+/* ==========================================
+   AFFORDABILITY
+========================================== */
+
+.small-text {
+  margin-top: -5px;
+
+  color: #7d8fa2;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+.afford-result {
+  margin-top: 12px;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f1f8ff,
+      #f7fbff
+    );
+
+  border: 1px solid #e1effd;
+
+  color: #4d647c;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   TRIP MODE
+========================================== */
+
+.trip-summary {
+  margin-top: 15px;
+
+  padding: 16px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7ff,
+      #f5faff
+    );
+
+  border: 1px solid #dceefe;
+
+  color: #4c6680;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.trip-summary strong {
+  color: #1769d1;
+
+  font-size: 16px;
+}
+
+
+/* ==========================================
+   CATEGORY STATISTICS
+========================================== */
+
+.category-row {
+  margin-bottom: 16px;
+}
+
+.category-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 7px;
+}
+
+.category-header span {
+  font-size: 13px;
+
+  color: #586e84;
+}
+
+.category-header strong {
+  font-size: 13px;
+
+  color: #246daf;
+}
+
+.category-bar-background {
+  width: 100%;
+
+  height: 9px;
+
+  background: #e9f1f8;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.category-bar {
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2683ed,
+      #62b2ff
+    );
+
+  border-radius: 20px;
+
+  transition:
+    width 0.4s ease;
+}
+
+
+/* ==========================================
+   TRANSACTIONS
+========================================== */
+
+.section-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 5px;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+.small-danger {
+  padding: 8px 11px;
+
+  background: #edf4fb;
+
+  color: #d15c68;
+
+  font-size: 11px;
+}
+
+.transaction-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #edf2f7;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.transaction-info strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  word-break: break-word;
+
+  color: #273d55;
+}
+
+.transaction-info small {
+  color: #8b9caf;
+
+  font-size: 11px;
+}
+
+.income-amount {
+  color: #219653;
+
+  white-space: nowrap;
+}
+
+.expense-amount {
+  color: #e25362;
+
+  white-space: nowrap;
+}
+
+.delete-transaction {
+  margin-top: 7px;
+
+  padding: 5px 8px;
+
+  background: #edf3f8;
+
+  color: #7b8d9f;
+
+  font-size: 10px;
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+.reset-section {
+  text-align: center;
+
+  padding: 5px 0 20px;
+}
+
+.reset-button {
+  background: transparent;
+
+  color: #a0adba;
+
+  font-size: 11px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+  text-align: center;
+
+  padding: 5px 0 20px;
+
+  color: #a2afbd;
+
+  font-size: 11px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+  .app {
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .balance-card h2 {
+    font-size: 34px;
+  }
+
+  .stats-grid {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-card strong {
+    font-size: 16px;
+  }
+
+}
+
+/* ==========================================
+   TRIPSAFE APP BRANDING
+========================================== */
+
+.app-header {
+  text-align: center;
+  padding: 8px 0 24px;
+}
+
+
+/* Logo */
+
+.logo-container {
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+.app-logo {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1976e8,
+      #65b5ff
+    );
+
+  font-size: 31px;
+
+  box-shadow:
+    0 10px 25px rgba(25, 118, 232, 0.25);
+
+  transform: rotate(-3deg);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.app-logo:hover {
+  transform: rotate(0deg) scale(1.04);
+
+  box-shadow:
+    0 13px 30px rgba(25, 118, 232, 0.3);
+}
+
+
+/* App name */
+
+.app-header h1 {
+  margin: 0;
+
+  font-size: 31px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #1769d1;
+}
+
+
+/* Subtitle */
+
+.app-header p {
+  margin: 6px 0 0;
+
+  color: #7b8da1;
+
+  font-size: 13px;
+}
+
+/* ==========================================
+   PRETTY STAT ICONS
+========================================== */
+
+.stat-card {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(31, 84, 140, 0.11);
+}
+
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 11px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e5f2ff,
+      #f2f8ff
+    );
+
+  font-size: 19px;
+
+  box-shadow:
+    inset 0 0 0 1px #dceefe;
+}
+
+
+.stat-card span {
+  margin-bottom: 5px;
+}
+
+.stat-card strong {
+  font-size: 19px;
+
+  color: #1769d1;
+}
+
+/* ==========================================
+   SECTION HEADINGS
+========================================== */
+
+.section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #1c3550;
+
+  margin-bottom: 17px;
+}
+
+
+.section-icon {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e5f2ff,
+      #f4f9ff
+    );
+
+  font-size: 19px;
+
+  box-shadow:
+    inset 0 0 0 1px #dceefe;
+}
+
+/* ==========================================
+   TRANSACTION ICON
+========================================== */
+
+.transaction-item {
+  align-items: center;
+
+  padding: 15px 0;
+
+  gap: 12px;
+}
+
+
+.transaction-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e5f2ff,
+      #f3f9ff
+    );
+
+  font-size: 21px;
+
+  box-shadow:
+    inset 0 0 0 1px #dceefe;
+}
+
+
+/* ==========================================
+   TRANSACTION INFORMATION
+========================================== */
+
+.transaction-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.transaction-info strong {
+  font-size: 14px;
+
+  color: #243b53;
+
+  margin-bottom: 5px;
+}
+
+.transaction-info small {
+  display: block;
+
+  color: #8a9bad;
+
+  font-size: 11px;
+}
+
+
+/* ==========================================
+   INCOME / EXPENSE AMOUNTS
+========================================== */
+
+.income-amount {
+  color: #159447;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+.expense-amount {
+  color: #e45161;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   DELETE BUTTON
+========================================== */
+
+.delete-transaction {
+  margin-top: 7px;
+
+  padding: 4px 8px;
+
+  border-radius: 8px;
+
+  background: #f3f6f9;
+
+  color: #8b98a6;
+
+  font-size: 9px;
+
+  font-weight: normal;
+}
+
+.delete-transaction:hover {
+  background: #ffecee;
+
+  color: #d95363;
+}
+
+/* ==========================================
+   TRANSACTION FORM HEADER
+========================================== */
+
+.form-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 18px;
+}
+
+
+.form-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  font-size: 23px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Income */
+
+.form-icon.income-form {
+  background:
+    linear-gradient(
+      135deg,
+      #e5f8ed,
+      #f2fcf6
+    );
+
+  box-shadow:
+    inset 0 0 0 1px #d5f0df;
+}
+
+
+/* Expense */
+
+.form-icon.expense-form {
+  background:
+    linear-gradient(
+      135deg,
+      #ffe9ed,
+      #fff4f5
+    );
+
+  box-shadow:
+    inset 0 0 0 1px #f8dce1;
+}
+
+
+.form-header h3 {
+  margin: 0 0 3px;
+
+  font-size: 18px;
+
+  color: #1d344d;
+}
+
+
+.form-header p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #8a9bad;
+}
+
+
+/* ==========================================
+   FORM INPUT SPACING
+========================================== */
+
+.transaction-form input,
+.transaction-form select {
+  margin-bottom: 2px;
+}
+
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.transaction-form .primary {
+  min-height: 48px;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 7px 18px rgba(25, 118, 232, 0.18);
+}
+
+
+/* ==========================================
+   CANCEL BUTTON
+========================================== */
+
+.transaction-form .secondary {
+  min-height: 48px;
+}
+
+/* ==========================================
+   PREMIUM BALANCE DASHBOARD
+========================================== */
+
+.balance-card {
+  padding: 23px 20px 21px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1468d4 0%,
+      #2181ec 48%,
+      #5bb3ff 100%
+    );
+}
+
+
+/* Top row */
+
+.balance-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.balance-top > span:first-child {
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.balance-label {
+  padding: 6px 9px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  backdrop-filter: blur(5px);
+}
+
+
+/* Main balance */
+
+.balance-card h2 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 13px 0 13px;
+
+  font-size: 40px;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* Status */
+
+.balance-status {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 18px;
+}
+
+.balance-status p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 12px;
+}
+
+
+/* Status dot */
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #a8f3c2;
+
+  box-shadow:
+    0 0 0 4px rgba(168, 243, 194, 0.12);
+}
+
+
+/* ==========================================
+   SURVIVAL DASHBOARD
+========================================== */
+
+.survival-card {
+  gap: 13px;
+
+  padding: 17px;
+
+  background: white;
+
+  border: 1px solid #e5eef7;
+}
+
+
+.survival-icon {
+  width: 49px;
+  height: 49px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  background: #eaf5ff;
+
+  font-size: 23px;
+
+  box-shadow:
+    inset 0 0 0 1px #dceefe;
+}
+
+
+.survival-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.survival-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 4px;
+}
+
+
+.survival-heading h3 {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #20384f;
+}
+
+
+.survival-badge {
+  padding: 3px 6px;
+
+  border-radius: 6px;
+
+  background: #edf6ff;
+
+  color: #4386c9;
+
+  font-size: 8px;
+
+  font-weight: bold;
+
+  letter-spacing: 0.5px;
+}
+
+
+.survival-content p {
+  margin: 0;
+
+  color: #7d8fa2;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+
+/* ==========================================
+   SMALL SCREEN BALANCE
+========================================== */
+
+@media (max-width: 400px) {
+
+  .balance-card h2 {
+    font-size: 34px;
+  }
+
+  .balance-label {
+    font-size: 9px;
+  }
+
+}
+
+/* ==========================================
+   PREMIUM MOBILE BUTTONS
+========================================== */
+
+button {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  min-height: 46px;
+
+  letter-spacing: 0.1px;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Press effect */
+
+button:active {
+  transform: scale(0.95);
+
+  box-shadow: none;
+}
+
+
+/* ==========================================
+   BLUE BUTTON
+========================================== */
+
+.primary {
+  background:
+    linear-gradient(
+      135deg,
+      #176bd8 0%,
+      #318eff 100%
+    );
+
+  box-shadow:
+    0 7px 16px rgba(30, 120, 230, 0.2);
+}
+
+
+/* ==========================================
+   EXPENSE BUTTON
+========================================== */
+
+.danger {
+  background:
+    linear-gradient(
+      135deg,
+      #ef5969 0%,
+      #ff7785 100%
+    );
+
+  box-shadow:
+    0 7px 16px rgba(239, 89, 105, 0.18);
+}
+
+
+/* ==========================================
+   BUTTON SHINE
+========================================== */
+
+.primary::after,
+.danger::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.16),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition:
+    left 0.5s ease;
+}
+
+.primary:hover::after,
+.danger:hover::after {
+  left: 140%;
+}
+
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.transaction-form .primary,
+.card > .primary {
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+
+.secondary {
+  background:
+    linear-gradient(
+      135deg,
+      #edf4fb,
+      #f6f9fc
+    );
+
+  color: #45627e;
+
+  border: 1px solid #e1ebf4;
+
+  box-shadow: none;
+}
+
+
+/* ==========================================
+   SMALL BUTTON
+========================================== */
+
+.small-danger {
+  min-height: 32px;
+
+  border-radius: 10px;
+
+  box-shadow: none;
+}
+
+
+/* ==========================================
+   RESET BUTTON
+========================================== */
+
+.reset-button {
+  min-height: 30px;
+
+  border-radius: 10px;
+
+  box-shadow: none;
+}
+
+/* ==========================================
+   CARD INTERACTION
+========================================== */
+
+.card,
+.stat-card,
+.cycle-card,
+.survival-card {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* Desktop hover */
+
+@media (hover: hover) {
+
+  .card:hover,
+  .cycle-card:hover,
+  .survival-card:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+      0 10px 28px rgba(39, 103, 170, 0.09);
+  }
+
+}
